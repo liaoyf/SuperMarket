@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+	<classPathEntry
+		location="F:/SuperMarket/WebContent/WEB-INF/lib/mysql-connector-java-5.1.28.jar"/>
+  <context id="context1" >
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/market?useUnicode=true&amp;characterEncoding=utf8"
+			userId="root" password="" />
+		<javaModelGenerator targetPackage="com.sm.mybatis.mb"
+			targetProject="SuperMarket" />
+		<sqlMapGenerator targetPackage="com.sm.mybatis.mb"
+			targetProject="SuperMarket" />
+		<javaClientGenerator targetPackage="com.sm.mybatis.mb"
+			targetProject="SuperMarket" type="XMLMAPPER" />
+		<!-- 表的生成设置 -->
+		<table tableName="t_goods_stock" domainObjectName="GoodsStock">
+			<generatedKey column="Goods_Stock_ID" sqlStatement="mysql"
+				identity="true" />
+		</table> 
+		<table tableName="t_in_stock" domainObjectName="InStock">
+			<generatedKey column="In_Stock_ID" sqlStatement="mysql"
+				identity="true" />
+		</table>
+		<table tableName="t_out_stock" domainObjectName="OutStock">
+			<generatedKey column="Out_Stock_ID" sqlStatement="mysql"
+				identity="true" />
+		</table> 
+		
+		<table tableName="t_sale" domainObjectName="Sale">
+			<generatedKey column="Sale_ID" sqlStatement="mysql"
+				identity="true" />
+		</table> 
+<!-- 		<table tableName="t_sale_breakage" domainObjectName="SaleBreakage">
+			<columnRenamingRule searchString="^user_" />
+			<generatedKey column="Breakage_ID" sqlStatement="mysql"
+				identity="true" />
+		</table> -->
+		
+		<!-- <table tableName="t_goods_order" domainObjectName="GoodsOrder">
+			<columnOverride column="Order_ID"></columnOverride>
+			<columnOverride column="Goods_ID"></columnOverride>
+		</table>
+		
+		
+		
+		
+		
+		
+		
+		
+		<table tableName="t_order" domainObjectName="Order">
+			<generatedKey column="order_ID" sqlStatement="mysql"
+				identity="true" />
+		</table>
+		
+		
+		
+		<table tableName="t_state" domainObjectName="State">
+			<generatedKey column="state_ID" sqlStatement="mysql"
+				identity="true" />
+		</table> 
+		<table tableName="t_sale_detail" domainObjectName="SaleDetail">
+			<generatedKey column="Sale_Detail_ID" sqlStatement="mysql"
+				identity="true" />
+		</table>  -->
+  </context>
+</generatorConfiguration>
